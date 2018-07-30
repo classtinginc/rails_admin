@@ -293,7 +293,7 @@ $(document).on 'rails_admin.dom_ready', (e, content) ->
             authenticity_token: $('meta[name=csrf-token]').attr('content')
 
         $(@).addClass('froala-wysiwyged')
-        $(@).editable(config_options)
+        $(@).froalaEditor(config_options)
         if uploadEnabled
           $(@).on 'editable.imageError', (e, editor, error) ->
             alert("error uploading image: " + error.message);
